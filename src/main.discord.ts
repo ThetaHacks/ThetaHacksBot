@@ -1,6 +1,7 @@
 import { Client } from "@typeit/discord";
 import { config as configDotenv } from "dotenv";
 import { resolve } from "path";
+import { HACKATHON } from "./enum/hackathon.enum";
 
 export class Main {
   private static _client: Client;
@@ -22,7 +23,7 @@ export class Main {
       `${__dirname}/*.js`
     );
     this._client.on("ready", () => {
-      this._client.user.setPresence({ activity: { name: 'Moderating ScribeHacks' }, status: 'online' })
+      this._client.user.setPresence({ activity: { name: `Moderating ${HACKATHON.Name}` }, status: 'online' })
     })
   }
 }
