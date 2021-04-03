@@ -2,6 +2,7 @@ import { Description, On, ArgsOf } from "@typeit/discord";
 import { Role } from "discord.js";
 import { ID } from "../enum/id.enum";
 import { Logger } from "../services/logger.service";
+import { HACKATHON } from "../enum/hackathon.enum";
 
 @Description("Discord Member Event Handlers")
 export abstract class MemberEvents {
@@ -20,7 +21,7 @@ export abstract class MemberEvents {
     );
     const guild = member.guild;
 
-    guild.systemChannel.send(`Hello ${member}! Welcome to the **ScribeHacks** Discord!`)
+    guild.systemChannel.send(`Hello ${member}! Welcome to the ${HACKATHON.Name} Discord!`)
 
     guild.roles.fetch(ID.MEMBER_ID).then((role: Role) => {
       member.roles
