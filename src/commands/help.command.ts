@@ -39,7 +39,7 @@ export abstract class Help {
         this.logger.info(`Sent help : message id ${messageSent.id}`);
       });
     }
-    
+
     else if (helpVersion === "fun") {
       if (helpPage === undefined || helpPage === 0 || helpPage === 1) {
         this.logger.info(helpVersion.valueOf());
@@ -59,27 +59,7 @@ export abstract class Help {
           this.logger.info(`Sent help : message id ${messageSent.id}`);
         });
       }
-      /*
-      else if (helpPage === 2) {
-        this.logger.info(helpVersion.valueOf());
-        const helpMsg = new MessageEmbed({
-          type: 'rich',
-          title: `${HACKATHON.Name} Help`,
-          description: `Hello I am the ${HACKATHON.Name} Support Bot, what may I assist you with?`,
-          color: COLOR.GREEN,
-        });
-
-        // For loop to count how many commands there are and add a field to helpMsg
-        for (const [key, value] of Object.entries(COMMANDS_FUN_2)) {
-          helpMsg.addField(key, value, false);
-        }
-
-        command.reply(helpMsg).then((messageSent) => {
-          this.logger.info(`Sent help : message id ${messageSent.id}`);
-        });
-      }
     }
-    */
 
     else if (helpVersion === "info") {
       this.logger.info(helpVersion.valueOf());
