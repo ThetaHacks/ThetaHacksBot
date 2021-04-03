@@ -5,6 +5,7 @@ import { ADMIN_COMMANDS, COMMANDS_FUN_1, COMMANDS_FUN_2, COMMANDS_INFO } from ".
 import { Admin } from "../guards/Admin.guard";
 import { NotBot } from "../guards/NotABot.guard";
 import { Logger } from "../services/logger.service";
+import { HACKATHON } from "../enum/hackathon.enum";
 
 interface helpArgs {
   helpVersion?: string;
@@ -27,8 +28,8 @@ export abstract class Help {
     if (helpVersion == undefined) {
       const helpMsg = new MessageEmbed({
         type: 'rich',
-        title: 'ScribeHacks Help',
-        description: `Hello I am the ScribeHacks Support Bot, what may I assist you with?`,
+        title: `${HACKATHON.Name} Help`,
+        description: `Hello I am the ${HACKATHON.Name} Support Bot, what may I assist you with?`,
         color: COLOR.GREEN,
       });
 
@@ -44,8 +45,8 @@ export abstract class Help {
         this.logger.info(helpVersion.valueOf());
         const helpMsg = new MessageEmbed({
           type: 'rich',
-          title: 'ScribeHacks Help',
-          description: `Hello I am the ScribeHacks Support Bot, what may I assist you with?`,
+          title: `${HACKATHON.Name} Help`,
+          description: `Hello I am the ${HACKATHON.Name} Support Bot, what may I assist you with?`,
           color: COLOR.GREEN,
         });
 
@@ -62,8 +63,8 @@ export abstract class Help {
         this.logger.info(helpVersion.valueOf());
         const helpMsg = new MessageEmbed({
           type: 'rich',
-          title: 'ScribeHacks Help',
-          description: `Hello I am the ScribeHacks Support Bot, what may I assist you with?`,
+          title: `${HACKATHON.Name} Help`,
+          description: `Hello I am the ${HACKATHON.Name} Support Bot, what may I assist you with?`,
           color: COLOR.GREEN,
         });
 
@@ -82,8 +83,8 @@ export abstract class Help {
       this.logger.info(helpVersion.valueOf());
       const helpMsg = new MessageEmbed({
         type: 'rich',
-        title: 'ScribeHacks Help',
-        description: `Hello I am the ScribeHacks Support Bot, what may I assist you with?`,
+        title: `${HACKATHON.Name} Help`,
+        description: `Hello I am the ${HACKATHON.Name} Support Bot, what may I assist you with?`,
         color: COLOR.GREEN,
       });
 
@@ -106,8 +107,8 @@ export abstract class Help {
 
     const helpMsg = new MessageEmbed({
       type: 'rich',
-      title: 'ScribeHacks Admin Help',
-      description: `Hello I am the ScribeHacks Support Bot, what may I assist you with?`,
+      title: `${HACKATHON.Name} Admin Help`,
+      description: `Hello I am the ${HACKATHON.Name} Support Bot, what may I assist you with?`,
       color: COLOR.GOLD,
     });
 
