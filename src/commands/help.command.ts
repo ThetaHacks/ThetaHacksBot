@@ -33,13 +33,13 @@ export abstract class Help {
         color: COLOR.GREEN,
       });
 
-      helpMsg.addField("Please use !help info or !help fun [1,2]", "!help info or !help fun [1,2]", false);
+      helpMsg.addField("Please use !help info or !help fun", "!help info or !help fun", false);
 
       command.reply(helpMsg).then((messageSent) => {
         this.logger.info(`Sent help : message id ${messageSent.id}`);
       });
     }
-
+    
     else if (helpVersion === "fun") {
       if (helpPage === undefined || helpPage === 0 || helpPage === 1) {
         this.logger.info(helpVersion.valueOf());
@@ -59,6 +59,7 @@ export abstract class Help {
           this.logger.info(`Sent help : message id ${messageSent.id}`);
         });
       }
+      /*
       else if (helpPage === 2) {
         this.logger.info(helpVersion.valueOf());
         const helpMsg = new MessageEmbed({
@@ -78,6 +79,7 @@ export abstract class Help {
         });
       }
     }
+    */
 
     else if (helpVersion === "info") {
       this.logger.info(helpVersion.valueOf());
