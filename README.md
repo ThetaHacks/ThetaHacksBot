@@ -1,4 +1,4 @@
-# ScribeHacksBot
+# ThetaHacksBot
 # My prefix is `!`
 
 We use yarn here.
