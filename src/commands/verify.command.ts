@@ -21,7 +21,7 @@ export abstract class Verify {
 
         const channel = command.channel as TextChannel;
 
-        channel.bulkDelete(99).then(() => { command.channel.send("Please type in !verify and the name of the Hackathon") });
+        channel.bulkDelete(99).then(() => { command.channel.send("Please type in !verify `thetahacks`") });
 
         const member_role = command.guild.roles.cache.find(role => role.name == 'Attendee' || role.id === ID.MEMBER_ID);
 
@@ -35,7 +35,7 @@ export abstract class Verify {
                 }
             }
             else {
-                command.author.send("Please type in: !verify and the name of the Hackathon");
+                command.author.send("Please type in: !verify `thetahacks`");
             }
         }
     }

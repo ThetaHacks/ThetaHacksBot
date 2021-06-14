@@ -24,7 +24,6 @@ export abstract class Info {
       )
       .setColor(COLOR.BLUE)
       .setThumbnail(LINKS.LOGO)
-      .setFooter("Powered by Discord.TS!");
 
     command.reply({ embed }).then((messageSent) => {
       this.logger.info(`Sent Info : message id ${messageSent.id}`);
